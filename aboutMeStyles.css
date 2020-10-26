@@ -1,0 +1,108 @@
+body{
+  margin: 0px;
+}
+nav{
+  display: flex;
+  justify-content: center;
+  background: blue;
+}
+header{
+  margin-bottom: 10px;
+}
+main{
+  display: grid;
+  grid-template-columns: 1fr min(90ch, 100%) 1fr;
+}
+.gridbaby {
+  grid-column: 2/3;
+  color: black;
+  background: rgb(228, 228, 228);
+  opacity: 70%;
+  font-size: 18pt;
+  padding: 0 10px 0 15px;
+}
+
+h2{
+ text-align: center;
+ border-bottom: blue 2px solid;
+}
+
+/* button styles */
+.button {
+  display: inline-flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #c0c0bf;
+  margin: 20px 20px 20px 20px;
+  color: #1ebdbd;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+a {
+  color: #BFC0C0;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+#button-2 {
+  position: relative;
+  cursor: pointer;
+}
+
+#button-2 a {
+  position: relative;
+  transition: all .35s ease-Out;
+}
+
+#slide {
+  width: 100%;
+  height: 100%;
+  left: -200px;
+  background:#c0c0bf;
+  position: absolute;
+  transition: all .35s ease-Out;
+  bottom: 0;
+}
+
+#button-2:hover #slide {
+  left: 0;
+}
+
+#button-2:hover a {
+  color: #2D3142;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  nav{
+    flex-wrap: wrap;
+  }
+  .gridbaby{
+    font-size: 14pt;
+  }
+ }
+
+ @media (max-width: 576px) {
+  nav{
+    flex-wrap: wrap;
+    }
+    .button{
+      height: 30px;
+      width: 100px;
+      margin: 15px 15px 15px 15px;
+    }
+    body{
+      font-size: .8em;
+    }
+    .gridbaby{
+      font-size: 14pt;
+    }
+}
