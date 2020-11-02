@@ -1,0 +1,108 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  width: 100%;
+}
+header{
+  background:#B4D6DB;
+  color: #F2EDE1;
+  text-transform: uppercase;
+  padding: 10px;
+}
+h1{
+  margin: 0;
+  border-bottom: #F2EDE1 2px solid;
+  width: 90%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  background-color: #F2EDE1;
+}
+/* Flex box code
+
+.wrapper{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 0 2px;
+  background: black;
+}
+
+.column{
+  flex: 32%;
+  max-width: 33%;
+  padding: 0 2px;
+} */
+
+figure{
+  margin: 2px;
+  position: relative;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+img{
+  width: 100%;
+  opacity: 1;
+  display: block;
+  transition: 0.5s ease;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.textwrapper{
+  opacity: 0;
+  transition: opacity 1s ease;
+  background-color: #F9E0DB;
+  position: absolute;
+  height: auto;
+}
+
+figure:hover .textwrapper{
+  opacity: 0.9;
+  animation: shakeX 2s;
+}
+
+
+figure:hover img{
+  opacity: 0.7;
+}
+
+p .textwrapper{
+}
+
+p{
+  text-align: center;
+  width: 100%;
+  color: white;
+  margin: 2px;
+}
+
+This is my flexbox media query.
+@media (max-width: 991.98px) {
+  body{
+    font-size: 10pt;
+  }
+  /* .column{
+  flex: 45%;
+  max-width: 50%;
+ */
+}
+}
+@media (max-width: 767.98px) {
+  body{
+    font-size: 8pt;
+  }
+  /* .column{
+    flex: 90%;
+    max-width: 100%;
+  } */
+}
+
