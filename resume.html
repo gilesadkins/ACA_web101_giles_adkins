@@ -6,18 +6,19 @@
   <title>Resume</title>
   <link rel="stylesheet" href="./resumeStyles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-<header class="container2">
-  <h1 class="name">
+<header class="container2" id="container2" onclick="ani1()">
+  <h1 class="name" >
     JEFF
   </h1>
-  <h1 class="name">
+  <h1 class="name" >
     GOLDBLUM
   </h1>
 </header>
   <section class="container1">
-  <img src="./jeffGoldblum.jpg" alt="picture of Jeff Goldblum" class="jeffPic">
+  <img src="./jeffGoldblum.jpg" alt="picture of Jeff Goldblum" class="jeffPic" id="jeffPic" onmouseover="ani6()"></img>
 </section>
 <section class="container3">
   <p>
@@ -33,20 +34,20 @@
   <h2 class="contactInfo">
     CONTACT <br> INFO
   </h2>
-  <i class="fa fa-phone-square fa-2x" aria-hidden="true"></i>
-  <p>
+  <i class="fa fa-phone-square fa-2x" aria-hidden="true" onclick="ani2()"></i>
+  <p id="phonenumber">
     123-456-7890
   </p>
-  <i class="fa fa-address-card-o fa-2x" aria-hidden="true"></i>
-  <p>
+  <i class="fa fa-address-card-o fa-2x" aria-hidden="true" onclick="ani3()"></i>
+  <p id="address">
     1000 Goldblum Lane
   </p>
-  <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
-  <p>
+  <i class="fa fa-envelope-o fa-2x" aria-hidden="true" onclick="ani4()"></i>
+  <p id="email">
     jeffyjefyy@jeffgoldblum.com
   </p>
-  <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-  <p>
+  <i class="fa fa-linkedin-square fa-2x" aria-hidden="true" onclick="ani5()"></i>
+  <p id="linkedIn">
     LinkedIn
   </p>
 </aside>
@@ -83,5 +84,6 @@
   </p>
   </article>
 </section>
+<script src="./resumeScripts.js"></script>
 </body>
 </html>

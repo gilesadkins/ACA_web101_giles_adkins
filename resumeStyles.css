@@ -80,3 +80,19 @@ i{
   color: white;
   font-size: 30pt;
 }
+
+#phonenumber{
+  visibility: hidden;
+}
+
+#address{
+  visibility: hidden;
+}
+
+#email{
+  visibility: hidden;
+}
+
+#linkedIn{
+  visibility: hidden;
+}
