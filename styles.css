@@ -1,79 +1,147 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url(https://imgs.mi9.com/uploads/abstract/4147/abstract-blue-backgrounds-37_1920x1200_71474.jpg);
-  background-repeat: no-repeat;
-  background-size: 1600px 1000px;
+  font-family: 'Quicksand', sans-serif;
   width: 100vw;
   height: 100vh;
+  padding: 0;
+  margin: 0;
+  color:#243540;
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(120ch, 100%)
+    1fr;
 }
-/* What kind of selector is this? */
-.logo {
-  width: 150px;
-  height: 100px;
-  margin: 3% 10%;
+
+.middle > * {
+  grid-column: 2;
+}
+.bleed {
+  width: 100%;
+  grid-column: 1 / 4;
 }
 
 header {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
 }
 
-main {
-  height: auto;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 30% 40% 30%;
+
+header>h2{
+  font-weight: 400;
+  background-color: #243540;
+  color: #F2F2F2;
+  padding: 10px 20px;
+  margin: 1px;
+  box-shadow: #DFF2EF 6px 6px;
+  margin-left: 15px;
 }
 
-/* This is an element within an element selector */ 
 nav > a {
-  margin: 2% 1% 3%;
-  height: 10%;
-  width: 15%;
+  margin: 20px 5px;
   color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  border-radius: 25px;
-  background: transparent;
-  padding: 20px;
+  font-size: 14px;
+  padding: 10px;
   text-align: center;
-  border: 2px solid white;
+  transition: ease-in .25s;
+  width: 20%;
+  text-decoration: none;
 }
 
-.has-border {
-  border-radius: 25px;
-  border: 2px solid #0795C3;
-  background: none;
-  padding: 25px;
+nav>a:hover{
+  background-color: #AEBFBC;
+  box-shadow: black .5px .5px .5px;
+  border-radius: 2px;
+  color: #F2F2F2;
 }
 
 nav {
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
   padding-right: 2%;
 }
-/* This is an ID selector */
-#profile-pic {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  margin: 15% auto;
-  grid-column: 2/3;
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: #243540;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  margin-right: 15px;
 }
 
-h1 {
+.hamburger:focus{
+  outline: none;
+}
+
+
+#imgDiv{
+  background-image: url("./headerImg.jpg");
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  opacity: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.hello{
+  font-size: 30px;
+  color: #F2F2F2;
+  padding-left: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.whoAmI{
+  display: flex;
+  margin-top: 10px;
+  padding: 20px;
+  border-top: 1px solid #AEBFBC ;
+}
+
+.buttonContainer > a {
+  margin: 20px 0;
   color: black;
-  grid-column: 2/3;
-  margin: 3% auto;
-  border-bottom: 2px solid #1940A9;;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  transition: ease-in .25s;
+  width: 100%;
+  text-decoration: none;
+  display: block;
 }
 
-h2 {
-  grid-column: 2/3;
-  margin: 3% auto;
-  font-style: italic;
+.buttonContainer > a:hover{
+  background-color: #AEBFBC;
+  box-shadow: black .5px .5px .5px;
+  border-radius: 2px;
+  color: #F2F2F2;
+}
+
+#profile-pic {
+  width: 50%;
+}
+
+.whoText{
+  padding: 0 20px;
+  text-align: center;
+}
+
+h3{
+  margin: 0;
 }
 
 .small-text {
@@ -83,19 +151,59 @@ h2 {
   margin: 3% auto;
 }
 
-button {
-  grid-column: 2/3;
-  margin: 5% auto;
-  width: 70%;
-  height: 15%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  border-radius: 25px;
-  background: transparent;
-  padding: 20px;
-  padding-bottom: 10%;
-  text-align: center;
-  color: black;
-  letter-spacing: 13px;
-  font-style: italic;
+@media (max-width: 575.98px) { 
+
+  }
+ 
+
+
+@media (max-width: 767.98px) { 
+  .nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding: 5px;
+  }
+  .nav>a{
+    width: 100%;
+    margin: 5px;
+  }
+  .nav.show{
+    display: flex;
+
+  }
+  .hamburger{
+    display: block;
+  }
+
+  .whoAmI {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  #profile-pic{
+    width: 95%;
+    margin-bottom: 10px;
+  }
+  .logo{
+    width: 70px;
+    height: 70px;
+  }
+
+  }
+
+
 }
+
+
+@media (max-width: 991.98px) { ... }
+
+@media (max-width: 1199.98px) { ... }
+
+/* Color Theme Swatches in Hex 
+.Okopova-Cafe&Restaurant-1-hex { color: #0D1D26; }
+.Okopova-Cafe&Restaurant-2-hex { color: #243540; }
+.Okopova-Cafe&Restaurant-3-hex { color: #AEBFBC; }
+.Okopova-Cafe&Restaurant-4-hex { color: #DFF2EF; }
+.Okopova-Cafe&Restaurant-5-hex { color: #F2F2F2; }
+

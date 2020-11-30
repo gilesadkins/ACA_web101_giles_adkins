@@ -39,7 +39,7 @@ header>h2{
   box-shadow: #DFF2EF 6px 6px;
 }
 
-nav > a {
+a {
   margin: 20px 5px;
   color: black;
   font-size: 14px;
@@ -50,7 +50,7 @@ nav > a {
   text-decoration: none;
 }
 
-nav>a:hover{
+a:hover{
   background-color: #AEBFBC;
   box-shadow: black .5px .5px .5px;
   border-radius: 2px;
@@ -62,4 +62,17 @@ nav {
   justify-content: flex-end;
   width: 60%;
   padding-right: 2%;
+}
+
+main{
+  display: flex;
+}
+.card{
+  height: 300px;
+  width: 200px;
+  border: black 1px solid;
+  border-radius: 5px;
+  box-shadow: black 1px 1px 1px;
+  margin: 10px;
+  padding: 10px;
 }

@@ -6,24 +6,42 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="./styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-        <title>My Portfolio</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Portfolio Landing Page</title>
     </head>
-    <body>
-        <header>
-            <img src="https://cdn.evbuc.com/eventlogos/188084824/acastandardcirclefullname.png" class="logo" alt="austin coding academy logo">
-            <nav>
+    <body class="middle">
+        <header class="bleed">
+            <h2 class="animate__animated animate__fadeIn">Giles<br>Adkins</h2>
+            <button class="hamburger" id="hamburger">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav class="nav" id="nav">
+                <a href="./index.html">Home</a>
                 <a href="./resume.html">Resume</a>
-                <a href="./aboutMe.html">About Me</a>
-                <a>My Blog</a>
-                <a class="has-border">Contact Me</a>
+                <a href="./portfolioPage.html">Portfolio</a>
+                <a href="./contact.html">Contact</a>
             </nav>
         </header>
-        <main>
-            <img src="./ProfilePic.jpeg" id="profile-pic" alt="Head shot of Me">
-            <h1 class="animate__animated animate__fadeIn">Giles Adkins</h1>
-            <h2>Web Developing Student</h2>
-            <a href="./portfolioPage.html">Portfolio Page</a>
+        <div class="bleed" id="imgDiv">
+            <p class="hello">Hello, my name is Giles Adkins!</p>
+        </div>
+        <main>  
+            <section class="whoAmI">
+                <img src="./ProfilePic.jpeg" id="profile-pic" alt="Head shot of Me" >
+                <article class="whoText">
+                    <h3>Who Am I?</h3>
+                    <p>I was born and raised in Austin, Texas. Currently, I am a web development student with Austin Coding Academy. I am also a college graduate with a degree in Management, from Texas State University. I am a very light-hearted individual that specializes in team work, problem solving, and creative thinking. I would love to find a front-end developer position with a company that fits my values and standards. If you would like to find out what those are, I urge you to explore my website! Click the "Read More" button below if you would like to learn more about me.</p>
+                    <div class="buttonContainer">
+                        <a href="./aboutMe.html">Read more...</a>
+                    </div>
+                    <img src="https://cdn.evbuc.com/eventlogos/188084824/acastandardcirclefullname.png" class="logo" alt="austin coding academy logo">
+                    <img src="./Texas State Logo.png" class="logo" alt="texas state university logo">
+                </article>
+            </section>
             <a class="small-text" href="https://austincodingacademy.com/">© Austin Coding Academy</a>
         </main>
     </body>
+    <script src="./navJS.js"></script>
 </html>
