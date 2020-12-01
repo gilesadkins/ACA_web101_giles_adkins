@@ -117,7 +117,8 @@ h3 {
   border-radius: 6px;
   border: none;
   outline: none;
-/*   box-shadow: 1px 1px 1px black; */
+  background-color: #AEBFBC;
+  color: #F2F2F2;
 }
 #cardButton:hover {
   box-shadow: 4px 3px 3px #00000024;
