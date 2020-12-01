@@ -8,7 +8,7 @@ body {
   display: grid;
   grid-template-columns:
     1fr
-    min(90ch, 100%)
+    min(120ch, 100%)
     1fr;
 }
 
@@ -22,11 +22,11 @@ body {
 
 header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
-  margin: 0 10px 0 10px;
-  height: 90px;
+  padding: 20px 0;
+  margin-bottom: 20px;
 }
 
 
@@ -37,6 +37,7 @@ header>h2{
   padding: 10px 20px;
   margin: 1px;
   box-shadow: #DFF2EF 6px 6px;
+  margin-left: 15px;
 }
 
 nav > a {
@@ -59,7 +60,68 @@ nav>a:hover{
 
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   width: 60%;
   padding-right: 2%;
 }
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: #243540;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  margin-right: 15px;
+}
+
+.hamburger:focus{
+  outline: none;
+}
+
+
+@media (max-width: 575.98px) { 
+
+  }
+ 
+
+
+@media (max-width: 767.98px) { 
+  .nav {
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 10px;
+    border-top: solid 1px;
+  }
+  .nav>a{
+    width: 80%;
+    margin: 1px;
+    border-bottom: solid 1px black;
+
+  }
+  .nav.show{
+    display: flex;
+
+  }
+  .hamburger{
+    display: block;
+  }
+}
+
+
+
+@media (max-width: 991.98px) { ... }
+
+@media (max-width: 1199.98px) { ... }
+
+/* Color Theme Swatches in Hex 
+.Okopova-Cafe&Restaurant-1-hex { color: #0D1D26; }
+.Okopova-Cafe&Restaurant-2-hex { color: #243540; }
+.Okopova-Cafe&Restaurant-3-hex { color: #AEBFBC; }
+.Okopova-Cafe&Restaurant-4-hex { color: #DFF2EF; }
+.Okopova-Cafe&Restaurant-5-hex { color: #F2F2F2; }
+

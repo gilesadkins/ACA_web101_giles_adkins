@@ -6,28 +6,54 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./portfolioPageStyles.css">
   <title>Portfolio</title>
 </head>
-<body>
+<body class="middle">
   <header class="bleed">
     <h2 class="animate__animated animate__fadeIn">Giles<br>Adkins</h2>
-    <nav>
+    <button class="hamburger" id="hamburger">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <nav class="nav" id="nav">
         <a href="./index.html">Home</a>
         <a href="./resume.html">Resume</a>
         <a href="./portfolioPage.html">Portfolio</a>
-        <a href="./aboutMe.html">About</a>
         <a href="./contact.html">Contact</a>
     </nav>
 </header>
+<h1>My Portfolio</h1>
 <main>
   <div class="card">
-    <a href="url">NASA Landing Page</a>
-  </div> 
+    <div class="card-body">
+      <h3>Nasa Landing Page</h3>
+      <p>We built this page early on in Web 101. It was meant to practice flex box and explore landing page design.</p>
+    </div>
+    <button class="btn btn--block card__btn" id="cardButton">Go!</button> 
+  </div>
   <div class="card">
-    <a href="./img-gallery/imgGallery.html"> Image Gallery</a>
+    <div class="card-body">
+      <h3>Teeny Tiny Table Tennis Tourney 2020</h3>
+      <p>This website is an assignment we had that was meant to show our capability of building a site with multiple pages and responsive design. I took advantage of this and decided to create a marketing/joke website for my ping pong tournament my friends and I are hosting and creating content for.</p>
+    </div>
+  <button class="btn btn--block card__btn" id="cardButton">Go!</button> 
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h3>Image Gallery</h3>
+      <p>This is an image gallery that uses grid and on-hover effects.</p>
+    </div>
+  <button class="btn btn--block card__btn" id="cardButton">Go!</button> 
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h3>Dummy Data To Do List</h3>
+      <p>This is a project that uses Fetch API and a list generating API. It generates list items, and has other fun features.</p>
+    </div>
+  <button class="btn btn--block card__btn" id="cardButton">Go!</button> 
   </div>
 </main>
-
+<script src="./navJS.js"></script>
 </body>
 </html>

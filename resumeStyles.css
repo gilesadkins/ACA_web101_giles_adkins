@@ -1,98 +1,185 @@
-body{
-display: grid;
-grid-template-rows: .5fr .3fr 3fr;
-grid-template-columns: 300px 2fr ; 
-grid-gap: 12px;
-height: 100%; 
-color: #280B5B;
-margin: 0px;
+body {
+  font-family: 'Quicksand', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  color:#243540;
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(120ch, 100%)
+    1fr;
 }
-.jeffPic{
-  height: 200px;
-  width: 200px;
-  padding: 50px;
+
+.middle > * {
+  grid-column: 2;
 }
-.container1{
-  height: 200px;
-  grid-row:1/2 ;
-  grid-column:1/2 ;
+.bleed {
+  width: 100%;
+  grid-column: 1 / 4;
 }
-.container2{
-  border-bottom: 2px solid #280B5B;
-  height: 200px;
-  width: 98%;
-  grid-row: 1/2;
-  grid-column: 2/3;
-  font-size: 26pt;
-  margin-top: 50px;
+
+header {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.name{
-  margin: 0px;
-}
-.container25{
-grid-row: 2/3;
-grid-column: 1/2;
-padding-left: 50px;
-font-size: 17pt;
-}
-.container3{
-  font-size: 20px;
-  grid-row:2/3;
-  grid-column:2/3;
-  display: flex;
-  width: 98%;
-}
-.container4{
-  grid-row: 3/4;
-  grid-column: 1/2;
-  background: rgb(2,0,36);
-  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(93,81,226,1) 0%, rgba(0,212,255,0.8715861344537815) 100%);
-  color: white;
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-evenly;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
 
+
+header>h2{
+  font-weight: 400;
+  background-color: #243540;
+  color: #F2F2F2;
+  padding: 10px 20px;
+  margin: 1px;
+  box-shadow: #DFF2EF 6px 6px;
+  margin-left: 15px;
 }
-.container5{
-  display: flex;
- flex-direction: column; 
- justify-content: flex-start;
-  grid-row: 3/4;
-  grid-column: 2/3;
-  width: 98%;
-  font-size: 20px;
-}
-h2{
-  border-bottom: 1px solid #280B5B;
-  width: 80%;
-}
-.contactInfo{
-  border-bottom: 2px solid white;
+
+nav > a {
+  margin: 20px 5px;
+  color: black;
+  font-size: 14px;
+  padding: 10px;
   text-align: center;
+  transition: ease-in .25s;
+  width: 20%;
+  text-decoration: none;
 }
 
-i{
-  color: white;
-  font-size: 30pt;
+nav>a:hover{
+  background-color: #AEBFBC;
+  box-shadow: black .5px .5px .5px;
+  border-radius: 2px;
+  color: #F2F2F2;
 }
 
-#phonenumber{
-  visibility: hidden;
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  padding-right: 2%;
 }
 
-#address{
-  visibility: hidden;
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: #243540;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  margin-right: 15px;
 }
 
-#email{
-  visibility: hidden;
+.hamburger:focus{
+  outline: none;
 }
 
-#linkedIn{
-  visibility: hidden;
-}
+
+
+.grid{
+  display: grid;
+  grid-template-rows: .5fr .3fr 3fr;
+  grid-template-columns: 40% 2fr ; 
+  grid-gap: 5px;
+  height: 100%; 
+  color: #280B5B;
+  margin: 0px;
+  }
+  .ProfilePic{
+    height: 260px;
+    width: 200px;
+    padding: 40px;
+  }
+  .container1{
+    grid-row:1/2 ;
+    grid-column:1/2 ;
+  }
+  .container2{
+    border-bottom: 2px solid #280B5B;
+    height: 200px;
+    width: 98%;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font-size: 26pt;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .name{
+    margin: 0px;
+  }
+  .container25{
+  grid-row: 2/3;
+  grid-column: 1/2;
+  padding-left: 50px;
+  font-size: 17pt;
+  }
+  .container3{
+    font-size: 20px;
+    grid-row:2/3;
+    grid-column:2/3;
+    display: flex;
+    width: 98%;
+  }
+  .container4{
+    grid-row: 3/4;
+    grid-column: 1/2;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(93,81,226,1) 0%, rgba(0,212,255,0.8715861344537815) 100%);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  
+  }
+  .container5{
+    display: flex;
+   flex-direction: column; 
+   justify-content: flex-start;
+    grid-row: 3/4;
+    grid-column: 2/3;
+    width: 98%;
+    font-size: 20px;
+  }
+  h2{
+    border-bottom: 1px solid #280B5B;
+  }
+  .contactInfo{
+    border-bottom: 2px solid white;
+    text-align: center;
+  }
+  
+
+  @media (max-width: 767.98px) { 
+    .nav {
+      display: none;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      padding: 10px;
+      margin-top: 10px;
+      border-top: solid 1px;
+    }
+    .nav>a{
+      width: 80%;
+      margin: 1px;
+      border-bottom: solid 1px black;
+  
+    }
+    .nav.show{
+      display: flex;
+  
+    }
+    .hamburger{
+      display: block;
+    }
+  }
